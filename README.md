@@ -61,10 +61,8 @@ Original idea by [@mrd0x](https://twitter.com/mrd0x): https://mrd0x.com/bypass-2
 The base docker has been created by  Joel Gámez Molina // @JoelGMSec
 
 
-
-
-# Contact
-This software does not offer any kind of guarantee. Its use is exclusive for educational environments and / or security audits with the corresponding consent of the client. I am not responsible for its misuse or for any possible damage caused by it.
-
-For more information, you can find me on Twitter as [@gm_eduard](https://twitter.com/gm_eduard/) and on @JoelGMSec blog [darkbyte.net](https://darkbyte.net).
-
+sudo docker cp Files/rfb.js $(docker ps -q):/home/user/noVNC/core/rfb.js
+sudo docker exec $(docker ps -q) cp noVNC/core/crypto/des.js noVNC/core/des.js
+sudo docker exec $(docker ps -q) cp noVNC/core/crypto/md5.js noVNC/core/util/md5.js
+wget https://raw.githubusercontent.com/novnc/noVNC/262a90b0e03da1ddf0b6ac5acd55a3167c4b558d/core/des.js
+sudo docker cp des.js $(docker ps -q):/home/user/noVNC/core/des.js
