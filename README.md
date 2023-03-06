@@ -62,7 +62,11 @@ The base docker has been created by  Joel Gámez Molina // @JoelGMSec
 
 
 sudo docker cp Files/rfb.js $(docker ps -q):/home/user/noVNC/core/rfb.js
+
 sudo docker exec $(docker ps -q) cp noVNC/core/crypto/des.js noVNC/core/des.js
+
 sudo docker exec $(docker ps -q) cp noVNC/core/crypto/md5.js noVNC/core/util/md5.js
+
 wget https://raw.githubusercontent.com/novnc/noVNC/262a90b0e03da1ddf0b6ac5acd55a3167c4b558d/core/des.js
+
 sudo docker cp des.js $(docker ps -q):/home/user/noVNC/core/des.js
